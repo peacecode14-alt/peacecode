@@ -1,0 +1,103 @@
+:root {
+    --bg: #0b131a;
+    --card: #141e27;
+    --green: #70e000;
+    --white: #edf2f4;
+    --gray: #8d99ae;
+}
+
+* { margin:0; padding:0; box-sizing: border-box; }
+body { font-family: 'Tajawal', sans-serif; background: var(--bg); color: var(--white); text-align: right; line-height: 1.6; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; padding: 20px 8%; background: rgba(11, 19, 26, 0.95); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(112, 224, 0, 0.1); }
+.logo { font-size: 1.6rem; font-weight: bold; }
+.logo span { color: var(--green); }
+.nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; }
+.btn-cta { background: var(--green); color: var(--bg) !important; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+
+/* Hero */
+.hero { height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10%; background: linear-gradient(to bottom, #0b131a, #141e27); }
+.hero h1 { font-size: 4rem; color: var(--green); margin-bottom: 15px; }
+.main-desc { font-size: 1.5rem; }
+.tech-tags { margin: 20px 0; }
+.tech-tags span { border: 1px solid var(--green); padding: 5px 15px; border-radius: 20px; margin: 0 5px; color: var(--green); font-size: 0.9rem; }
+.slogan { margin-top: 25px; font-weight: bold; color: var(--gray); }
+.english-slogan { font-style: italic; opacity: 0.6; margin-bottom: 30px; }
+.hero-btn { background: var(--green); color: var(--bg); padding: 15px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
+.hero-btn:hover { box-shadow: 0 0 20px rgba(112, 224, 0, 0.4); }
+
+/* Sections General */
+section { padding: 80px 8%; }
+h2 { text-align: center; margin-bottom: 40px; color: var(--green); font-size: 2.2rem; }
+
+/* About */
+.about { text-align: center; background: var(--card); }
+.about p { max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--gray); }
+
+/* Services Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.s-item { background: #1b262f; padding: 25px; border-radius: 10px; text-align: center; border-right: 4px solid var(--green); transition: 0.3s; }
+.s-item:hover { background: var(--green); color: var(--bg); }
+
+/* Pricing */
+.price-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.price-card { background: var(--card); padding: 40px 30px; border-radius: 15px; width: 300px; text-align: center; position: relative; border: 1px solid #2d3748; }
+.price-card.featured { border: 2px solid var(--green); transform: scale(1.05); }
+.price-card h3 { margin-bottom: 15px; font-size: 1.8rem; }
+.price { font-size: 1.3rem; color: var(--green); margin-bottom: 20px; font-weight: bold; }
+.price-card ul { list-style: none; color: var(--gray); }
+.price-card li { margin-bottom: 10px; }
+.badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--green); color: var(--bg); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+footer { text-align: center; padding: 40px; border-top: 1px solid #1b262f; color: var(--gray); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* يفضل إضافة قائمة موبايل لاحقاً */
+}
+/* تنسيق روابط التواصل في الفوتر */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.footer-note {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* تعديل زر الواتساب في الهيرو ليكون بارزاً */
+.hero-btn i {
+    margin-left: 10px;
+}
